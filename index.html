@@ -28,7 +28,7 @@
       --laranja-claro: #f2e3d3;
       --laranja-suave: #f9efe5;
       --cinza-borda: #dce3ec;
-      --cinza-texto: #5a6b82;
+      --cinza-texto: #7C8591;
       --cinza-suave: #EDF2F4;
       --vermelho-erro: #dc2626;
       --verde-sucesso: #1ba789;
@@ -63,16 +63,17 @@
     }
 
     .form-title {
-      font-size: 28px;
+      font-size: 32px;
       font-weight: 700;
       color: var(--azul-crefaz);
       margin-bottom: 6px;
+      letter-spacing: -0.3px;
     }
 
     .required-legend {
       font-size: 13px;
       color: var(--cinza-texto);
-      margin-bottom: 28px;
+      margin-bottom: 32px;
     }
 
     .required-legend span,
@@ -88,10 +89,11 @@
 
     .form-label {
       display: block;
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 600;
       color: var(--azul-crefaz);
-      margin-bottom: 8px;
+      margin-bottom: 10px;
+      letter-spacing: -0.3px;
     }
 
     /* Radio Cards (Identificação) */
@@ -105,11 +107,11 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      padding: 14px 16px;
-      border: 1.5px solid var(--cinza-borda);
+      padding: 16px;
+      border: 1.5px solid #dce3ec;
       border-radius: 10px;
       cursor: pointer;
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 600;
       color: var(--azul-crefaz);
       transition: all 0.2s ease;
@@ -153,10 +155,10 @@
     .anon-notice {
       display: none;
       margin-top: 14px;
-      padding: 14px 16px;
+      padding: 16px;
       background-color: #f0f4f9;
       border-radius: 8px;
-      font-size: 13.5px;
+      font-size: 16px;
       color: var(--azul-crefaz);
     }
 
@@ -167,8 +169,8 @@
     /* Inputs, Textareas e Selects */
     .form-control {
       width: 100%;
-      padding: 13px 14px;
-      font-size: 14px;
+      padding: 16px;
+      font-size: 16px;
       font-family: inherit;
       color: var(--azul-crefaz);
       background-color: #ffffff;
@@ -213,24 +215,24 @@
 
     .char-counter {
       text-align: right;
-      font-size: 12px;
+      font-size: 13px;
       color: var(--cinza-texto);
       margin-top: 6px;
     }
 
     /* Upload de Arquivo ZIP */
     .upload-area {
-      border: 1.5px dashed #f09562;
+      border: 2px dashed var(--laranja-crefaz);
       background-color: #fffaf7;
       border-radius: 12px;
-      padding: 26px 20px;
+      padding: 24px;
       text-align: center;
       cursor: pointer;
       transition: background-color 0.2s ease, border-color 0.2s ease;
     }
 
     .upload-area:hover {
-      background-color: #fff3eb;
+      background-color: var(--laranja-suave);
       border-color: var(--laranja-crefaz);
     }
 
@@ -317,7 +319,7 @@
     }
 
     .checkbox-group label {
-      font-size: 14px;
+      font-size: 16px;
       color: var(--azul-crefaz);
       cursor: pointer;
     }
@@ -331,7 +333,7 @@
     /* Mensagens de Erro e Alertas */
     .error-msg {
       display: none;
-      font-size: 12.5px;
+      font-size: 13px;
       color: var(--laranja-crefaz);
       font-weight: 500;
       margin-top: 6px;
@@ -388,10 +390,10 @@
     /* Banner Inferior de E-mail */
     .email-banner {
       margin-top: 24px;
-      background-color: var(--azul-escuro);
+      background-color: var(--azul-crefaz);
       color: #ffffff;
-      border-radius: 18px;
-      padding: 22px 28px;
+      border-radius: 20px;
+      padding: 32px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -407,7 +409,7 @@
 
     .email-banner a {
       color: var(--laranja-crefaz);
-      font-weight: 700;
+      font-weight: 400;
       text-decoration: underline;
     }
 
@@ -494,7 +496,7 @@
             <polyline points="20 6 9 17 4 12"></polyline>
           </svg>
         </div>
-        <h2>Relato enviado com sucesso</h2>
+        <h2>Relato enviado com sucesso!</h2>
         <p>Agradecemos sua iniciativa e confiança.</p>
         <button type="button" class="btn-new-report" id="btnNewReport">Enviar outro relato</button>
       </div>
@@ -502,7 +504,7 @@
       <!-- Formulário Principal -->
       <div id="formContainer">
         <h1 class="form-title">Formulário de denúncia</h1>
-        <p class="required-legend"><span>*</span> Campos obrigatórios</p>
+        <p class="required-legend"><span>*</span> Campos obrigatórios.</p>
 
         <!-- Alerta de erro geral do servidor -->
         <div id="serverAlert" class="server-alert" role="alert">
@@ -520,11 +522,11 @@
             <div class="radio-grid">
               <label class="radio-card" id="cardSim">
                 <input type="radio" name="identificacao" value="sim">
-                <span>Sim, quero me identificar</span>
+                <span>Sim, quero me identificar.</span>
               </label>
               <label class="radio-card" id="cardNao">
                 <input type="radio" name="identificacao" value="nao">
-                <span>Não, relato anônimo</span>
+                <span>Não, relato anônimo.</span>
               </label>
             </div>
             <p id="errIdentificacao" class="error-msg">Informe se deseja se identificar.</p>
@@ -564,14 +566,14 @@
           <div class="form-group">
             <label class="form-label" for="funcao">Sua função</label>
             <input type="text" id="funcao" name="funcao" class="form-control"
-              placeholder="Ex.: colaborador, cliente, fornecedor, parceiro">
+              placeholder="Ex.: colaborador, cliente, fornecedor, parceiro.">
           </div>
 
           <!-- 3. Descrição da situação -->
           <div class="form-group">
             <label class="form-label" for="descricao">Descrição da situação <span class="req">*</span></label>
             <textarea id="descricao" name="descricao" class="form-control" maxlength="5000"
-              placeholder="Descreva o que aconteceu"></textarea>
+              placeholder="Descreva o que aconteceu."></textarea>
             <div style="display: flex; justify-content: space-between; align-items: flex-start;">
               <p id="errDescricao" class="error-msg">Descreva a situação com pelo menos 20 caracteres.</p>
               <p class="char-counter" style="margin-left: auto;"><span id="charCount">0</span> / 5000 caracteres (mínimo
@@ -687,15 +689,15 @@
     </div>
 
     <!-- Banner Inferior Alternativo de E-mail -->
-    <div class="email-banner">
+    <!-- <div class="email-banner">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
         stroke-linecap="round" stroke-linejoin="round">
         <rect x="2" y="4" width="20" height="16" rx="2"></rect>
         <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
       </svg>
-      <span>Prefere e-mail? Envie sua denúncia pelo <strong>e-mail</strong> <a
-          href="mailto:denuncias@crefaz.com.br">denuncias@crefaz.com.br</a></span>
-    </div>
+      <span>Prefere e-mail? Envie sua denúncia pelo e-mail <a href="mailto:denuncias@crefaz.com.br">denuncias@crefaz.com.br</a></span>
+    </div> -->
+
   </div>
 
   <script>
