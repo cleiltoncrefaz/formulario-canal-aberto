@@ -108,7 +108,7 @@
       align-items: center;
       gap: 10px;
       padding: 16px;
-      border: 1.5px solid #dce3ec;
+      border: 2px solid #dce3ec;
       border-radius: 10px;
       cursor: pointer;
       font-size: 16px;
@@ -174,7 +174,7 @@
       font-family: inherit;
       color: var(--azul-crefaz);
       background-color: #ffffff;
-      border: 1.5px solid var(--cinza-borda);
+      border: 2px solid var(--cinza-borda);
       border-radius: 10px;
       outline: none;
       transition: border-color 0.2s ease, box-shadow 0.2s ease;
@@ -264,7 +264,7 @@
       justify-content: space-between;
       padding: 12px 16px;
       background-color: #f8fafd;
-      border: 1.5px solid var(--cinza-borda);
+      border: 2px solid var(--cinza-borda);
       border-radius: 10px;
       margin-top: 10px;
       font-size: 14px;
@@ -518,7 +518,7 @@
 
           <!-- 1. Identificação -->
           <div class="form-group">
-            <label class="form-label">Você quer se identificar? <span class="req">*</span></label>
+            <label class="form-label">Você se sente confortável pra se identificar? <span class="req">*</span></label>
             <div class="radio-grid">
               <label class="radio-card" id="cardSim">
                 <input type="radio" name="identificacao" value="sim">
@@ -526,14 +526,14 @@
               </label>
               <label class="radio-card" id="cardNao">
                 <input type="radio" name="identificacao" value="nao">
-                <span>Não, relato anônimo.</span>
+                <span>Quero que seja anônimo.</span>
               </label>
             </div>
             <p id="errIdentificacao" class="error-msg">Informe se deseja se identificar.</p>
 
             <!-- Aviso se Anônimo -->
             <div id="anonNotice" class="anon-notice">
-              Seu relato será anônimo. Evite incluir na descrição ou nos anexos informações que permitam identificá-lo.
+              Fique à vontade o seu relato vai ser anônimo. Por isso, não coloque seu nome nem outras informações que possam te identificar nas respostas enviadas.
             </div>
 
             <!-- Campos se Identificado -->
@@ -564,14 +564,14 @@
 
           <!-- 2. Sua função -->
           <div class="form-group">
-            <label class="form-label" for="funcao">Sua função</label>
+            <label class="form-label" for="funcao">Qual é a sua função na empresa hoje?</label>
             <input type="text" id="funcao" name="funcao" class="form-control"
               placeholder="Ex.: colaborador, cliente, fornecedor, parceiro.">
           </div>
 
           <!-- 3. Descrição da situação -->
           <div class="form-group">
-            <label class="form-label" for="descricao">Descrição da situação <span class="req">*</span></label>
+            <label class="form-label" for="descricao">Conte os detalhes da situação <span class="req">*</span></label>
             <textarea id="descricao" name="descricao" class="form-control" maxlength="5000"
               placeholder="Descreva o que aconteceu."></textarea>
             <div style="display: flex; justify-content: space-between; align-items: flex-start;">
@@ -583,20 +583,19 @@
 
           <!-- 4. Nome das pessoas envolvidas -->
           <div class="form-group">
-            <label class="form-label" for="envolvidos">Nome das pessoas envolvidas, inclusive testemunhas</label>
+            <label class="form-label" for="envolvidos">Se tiver o nome das pessoas envolvidas ou de testemunhas, conta aqui pra gente</label>
             <textarea id="envolvidos" name="envolvidos" class="form-control"></textarea>
           </div>
 
           <!-- 5. Data da situação -->
           <div class="form-group">
-            <label class="form-label" for="dataSituacao">Data em que aconteceu, acontece ou acontecerá a
-              situação</label>
+            <label class="form-label" for="dataSituacao">Quando essa situação aconteceu, acontece ou vai acontecer?</label>
             <input type="date" id="dataSituacao" name="dataSituacao" class="form-control">
           </div>
 
           <!-- 6. Tipo -->
           <div class="form-group">
-            <label class="form-label" for="tipo">Tipo <span class="req">*</span></label>
+            <label class="form-label" for="tipo">Você diria que a situação é um tipo de: <span class="req">*</span></label>
             <select id="tipo" name="tipo" class="form-control">
               <option value="">Selecione o tipo</option>
               <option value="Assédio Moral">Assédio Moral</option>
@@ -616,33 +615,31 @@
 
           <!-- 7. Local -->
           <div class="form-group">
-            <label class="form-label" for="local">Local</label>
+            <label class="form-label" for="local">Onde essa situação aconteceu, acontece ou vai acontecer?</label>
             <input type="text" id="local" name="local" class="form-control" placeholder="Ex.: unidade, cidade, setor">
           </div>
 
           <!-- 8. Por quê? -->
           <div class="form-group">
-            <label class="form-label" for="porque">Por quê? A causa ou motivo da situação relatada, quando
-              aplicável</label>
+            <label class="form-label" for="porque">Na sua opinião, por que essa situação acontece, aconteceu ou vai acontecer?</label>
             <textarea id="porque" name="porque" class="form-control"></textarea>
           </div>
 
           <!-- 9. Quanto? -->
           <div class="form-group">
-            <label class="form-label" for="quanto">Quanto? Se for possível medir: valor R$, frequência e/ou quantidade
-              envolvida, quando aplicável</label>
+            <label class="form-label" for="quanto">Tem como colocar a situação em números? Se sim, conta pra gente o valor (R$) envolvido, a quantidade ou quantas vezes isso acontece/já aconteceu.</label>
             <textarea id="quanto" name="quanto" class="form-control"></textarea>
           </div>
 
           <!-- 10. Provas -->
           <div class="form-group">
-            <label class="form-label" for="provas">Provas. Se elas existem e onde podem ser encontradas</label>
+            <label class="form-label" for="provas">Você sabe se existe alguma prova da situação e onde a gente consegue encontrar essas informações?</label>
             <textarea id="provas" name="provas" class="form-control"></textarea>
           </div>
 
           <!-- 11. Anexo (ZIP) -->
           <div class="form-group">
-            <label class="form-label">Anexo (ZIP)</label>
+            <label class="form-label">Se tiver arquivos relacionados (imagens, prints ou documentos), envie pra gente em uma pasta ZIP.</label>
             <input type="file" id="anexoZip" name="anexoZip" accept=".zip,application/zip,application/x-zip-compressed"
               style="display: none;">
 
@@ -656,7 +653,7 @@
                 </svg>
               </div>
               <p class="upload-title">Selecionar arquivo .zip</p>
-              <p class="upload-hint">Opcional. Apenas 1 arquivo .zip, até 10 MB. Para vários documentos, compacte-os num
+              <p class="upload-hint">Apenas 1 arquivo .zip, até 10 MB. Para vários documentos, compacte-os num
                 único ZIP.</p>
             </div>
 
